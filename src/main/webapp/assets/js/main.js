@@ -2,11 +2,11 @@
 window.addEventListener('DOMContentLoaded', () => {
     // Color name mappings
     const colorNames = {
-        '#EBE9DD': 'COCONUT MILK',
-        '#E1DACA': 'CHALK BEIGE',
-        '#A8A696': 'SAGE GREEN',
-        '#766B5D': 'TAUPE BROWN',
-        '#162A2C': 'MIDNIGHT'
+        '#1C1C1C': 'NERO',
+        '#6D6D6D': 'DIM GRAY',
+        '#766B5D': 'CHALK BEIGE',
+        '#241a16': 'DARK CHOCOLATE',
+        '#162A2C': 'MIDNIGHT GREEN'
     };
 
     // Material name mappings

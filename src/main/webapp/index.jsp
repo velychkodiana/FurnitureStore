@@ -7,8 +7,9 @@
   <title>Furniture Store - Customize Your Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
 <header class="navbar">
@@ -36,25 +37,23 @@
         <p>Design and customize your perfect furniture pieces with our easy-to-use 3D configurator.</p>
         <a href="#sofa" class="btn primary">Start Designing</a>
       </div>
-      <div class="hero-model" id="roomViewer"></div>
+      <div id="scene1" class="hero-model"></div>
     </div>
   </section>
 
   <section id="sofa" class="product-section">
     <div class="container product-grid">
-      <div class="product-model" id="sofaViewer"></div>
+      <div id="scene2" class="product-model"></div>
       <div class="product-controls">
         <h2>Custom Sofa</h2>
-        <label>Color</label>
-        <select id="sofaColor">
-          <option value="#EBE9DD">COCONUT MILK</option>
-          <option value="#E1DACA">CHALK BEIGE</option>
-          <option value="#A8A696">SAGE GREEN</option>
-          <option value="#766B5D">TAUPE BROWN</option>
-          <option value="#162A2C">MIDNIGHT</option>
+        <label for="sofaColor">Color</label><select id="sofaColor">
+        <option value="#1C1C1C">NERO</option>
+        <option value="#6D6D6D">DIM GRAY</option>
+        <option value="#766B5D">CHALK BEIGE</option>
+        <option value="#241a16">DARK CHOCOLATE</option>
+        <option value="#162A2C">MIDNIGHT GREEN</option>
         </select>
-        <label>Fabric</label>
-        <select id="sofaMaterial">
+        <label for="sofaMaterial">Fabric</label><select id="sofaMaterial">
           <option value="linen">Linen</option>
           <option value="leather">Leather</option>
           <option value="velvet">Velvet</option>
@@ -66,21 +65,19 @@
 
   <section id="coffee-table" class="product-section">
     <div class="container product-grid reverse">
-      <div class="product-model" id="tableViewer"></div>
+      <div id="scene3" class="product-model"></div>
       <div class="product-controls">
         <h2>Custom Coffee Table</h2>
-        <label>Material</label>
-        <select id="tableMaterial">
+        <label for="tableMaterial">Material</label><select id="tableMaterial">
           <option value="wood">Wood</option>
           <option value="glass">Glass</option>
         </select>
-        <label>Color</label>
-        <select id="tableColor">
-          <option value="#EBE9DD">COCONUT MILK</option>
-          <option value="#E1DACA">CHALK BEIGE</option>
-          <option value="#A8A696">SAGE GREEN</option>
-          <option value="#766B5D">TAUPE BROWN</option>
-          <option value="#162A2C">MIDNIGHT</option>
+        <label for="tableColor">Color</label><select id="tableColor">
+        <option value="#1C1C1C">NERO</option>
+        <option value="#6D6D6D">DIM GRAY</option>
+        <option value="#766B5D">CHALK BEIGE</option>
+        <option value="#241a16">DARK CHOCOLATE</option>
+        <option value="#162A2C">MIDNIGHT GREEN</option>
         </select>
         <button class="btn primary add-to-cart" data-product="coffee-table">Add to Cart</button>
       </div>
@@ -89,21 +86,20 @@
 
   <section id="chair" class="product-section">
     <div class="container product-grid">
-      <div class="product-model" id="chairViewer"></div>
+      <div id="scene4" class="product-model"></div>
       <div class="product-controls">
         <h2>Custom Chair</h2>
-        <label>Fabric</label>
-        <select id="chairMaterial">
+        <label for="chairMaterial">Fabric</label><select id="chairMaterial">
           <option value="linen">Linen</option>
           <option value="leather">Leather</option>
           <option value="velvet">Velvet</option>
         </select>
         <label for="chairColor">Color</label><select id="chairColor">
-          <option value="#EBE9DD">COCONUT MILK</option>
-          <option value="#E1DACA">CHALK BEIGE</option>
-          <option value="#A8A696">SAGE GREEN</option>
-          <option value="#766B5D">TAUPE BROWN</option>
-          <option value="#162A2C">MIDNIGHT</option>
+          <option value="#1C1C1C">NERO</option>
+          <option value="#6D6D6D">DIM GRAY</option>
+          <option value="#766B5D">CHALK BEIGE</option>
+          <option value="#241a16">DARK CHOCOLATE</option>
+          <option value="#162A2C">MIDNIGHT GREEN</option>
         </select>
         <button class="btn primary add-to-cart" data-product="chair">Add to Cart</button>
       </div>
@@ -160,12 +156,9 @@ alert('Thank you for your order!');
 
 }</script>
 
-
 <script src="assets/js/main.js"></script>
-<script src="assets/js/roomViewer.js"></script>
-<script src="assets/js/sofaViewer.js"></script>
-<script src="assets/js/tableViewer.js"></script>
-<script src="assets/js/chairViewer.js"></script>
 <script src="assets/js/navigation.js"></script>
+<script src="assets/js/view.js"></script>
+
 </body>
 </html>
